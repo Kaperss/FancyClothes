@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Karla', sans-serif;
+}
+body {
+	font-family: 'Lato', sans-serif;
+}
+hr {
+	height: 3px;
+	border: 0;
+	box-shadow: inset 0 3px 3px -3px rgba(0, 0, 0, 0.5);
+}
+.flagogdkk {
+	border: 2px solid #eee;
+	background: darken(white, 5%);
+	width:50%;
+	.flag {
+		border-right: 2px solid #eee;
+		img {
+			width:25px;
+			height:25px;
+		}
+	}
+}
+hr {
+}
+#homeLogo {
+	width: 50px;
+}
+nav {
+	font-family:'Oswald', sans-serif;
+	font-size: 1.50em;
+	background: transparent !important;
+	border: 0 !important;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		li {
+
+			a{
+				color: #222 !important;
+				&:hover{
+					text-decoration: underline !important;
+				}
+			}
+		}
+	}
+}
+
+.totoejrow { 
+	h2 {
+		padding: 10px;
+	}
+	.herretoej{
+		background-image: url('../img/kategoriHerre.jpg');
+		
+	}
+	.kvindetoej {
+		background-image: url('../img/kategoriKvinde.jpg');
+		
+	}
+	.herretoej, .kvindetoej {
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		opacity: 0.6;
+		&:hover {
+			transition: 0.3s;
+			opacity: 0.8;
+		}
+	}
+	button {
+		background: transparent;
+		border: 2px solid black;
+		margin: 10px;
+		padding: 10px;
+		transition: 0.3s;
+		&:hover {
+			background: #ccc;
+			transition: 0.3s;
+		}
+	}
+}
+
+.row article {
+	background-clip: padding-box;
+}
+.centrer {
+	text-align:center;
+}
+.grey {
+	color:grey;
+}
