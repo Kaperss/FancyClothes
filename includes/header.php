@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+<<<<<<< HEAD
 	<title>Fancy clothes | <?php echo $title; ?> </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -125,3 +126,10 @@
 <hr>
 
 
+=======
+	<title>Fancy clothes | <?php echo "$_PAGE"; ?> </title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+>>>>>>> 50191aaa3d2e55c31491dce02c108e36b1e2a55b

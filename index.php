@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 $activePage = "home";
 $title = "Home";
 require_once "includes/header.php" ?>
@@ -63,3 +64,9 @@ require_once "includes/header.php" ?>
 <?php require_once "includes/footer.php" ?>
 
 
+=======
+$title = "Home";
+ require_once "includes/header.php" ?>
+
+<?php require_once "includes/footer.php" ?>
+>>>>>>> 50191aaa3d2e55c31491dce02c108e36b1e2a55b

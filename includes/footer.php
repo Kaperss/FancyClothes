@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <hr>
 <footer class="container">
 	<div class="row d-flex">
@@ -12,5 +13,7 @@
 	</div>
 </footer>
 
+=======
+>>>>>>> 50191aaa3d2e55c31491dce02c108e36b1e2a55b
 </body>
 </html>
