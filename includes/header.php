@@ -13,18 +13,18 @@
 <body>
 	<div class="container toppen">
 		<div class="row">
-			<div class="flagogdkk container col-md-2">
+			<div class="flagogdkk container col-sm-2">
 				<div class="row">
-					<div class="flag col-sm-9">
+					<div class="flag col-sm-7 col-md-8 col-lg-8">
 						<img src="img/ikon.png" alt="Dansk sprog">
 						Dansk
 					</div>
-					<div class="dkk col-sm-3">
+					<div class="dkk col-sm-5 col-md-4 col-lg-4">
 						DKK
 					</div>
 				</div>
 			</div>
-			<div class="container col-md-2 col-md-offset-8" >
+			<div class="container col-sm-2 col-sm-offset-8" >
 				<form action="#" class="row">
 					<input type="text" placeholder="Indtast søgning.." class="col-md-9">
 					<button class="col-md-3">Søg</button>
@@ -40,7 +40,7 @@
 	<nav class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -49,7 +49,7 @@
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="navigation">
 				<ul class="nav navbar-nav navbar-left">
 					<li class="nav-item">
 						<a class="nav-link p-3" href="index.php">Forside</a>
@@ -78,26 +78,30 @@
 
 						else { 
 							echo '<li><a class="nav-link p-3 login" 
-							href="#">
+							href="login.php">
 							Log ind </a></li>';
 							echo '<li><a class="nav-link p-3 register" 
-							href="newUser.php">
+							href="register.php">
 							Opret bruger </a></li>';
 						} 
 						?>
 
 					</li>
 				</ul>
-				<ul class="nav nabar-nav navbar-right">
-					<li class="nav-item  shoppingCart">
-						<div class="col-md-1 offset-1 ">
-							Din indkøbsvogn er tom
-						</div>
-						<div>
-							<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-						</div>
+				<!-- To få til at virke ordentligt 
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item">
+						<div class="row">
+							<div class="shoppingCart col-md-9">
+								Din indkøbsvogn er tom
+							</div>
+							<div>
+								<i class="fa fa-shopping-cart shoppingCartIcon col-md-3" aria-hidden="true"></i>
+							</div>
+						</div>			
 					</li>
-				</ul>
+				</ul> 
+				-->
 			</div>
 		</div>
 	</nav>

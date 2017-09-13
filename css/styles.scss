@@ -38,6 +38,9 @@ nav {
 	font-size: 1.50em;
 	background: transparent !important;
 	border: 0 !important;
+	button {
+		background: black !important;
+	}
 
 	ul {
 		display: flex;
@@ -76,6 +79,7 @@ nav {
 		opacity: 0.6;
 		background-clip: padding-box;
 		border: 15px solid transparent;
+		transition: 0.3s;
 		&:hover {
 			transition: 0.3s;
 			opacity: 1;
@@ -94,12 +98,10 @@ nav {
 	}
 }
 
-main .container .row article {
+main article {
 	text-align: center;
-	border: 2px solid #eee;
-	h4 {
-		margin: auto;
-	}
+	border: 1px solid #ddd;
+	padding: 0 !important;
 }
 .centrer {
 	text-align:center;
@@ -109,12 +111,6 @@ main .container .row article {
 }
 .greybg {
 	background: #eee;
-	h5 {
-		padding: 10px 20px 0 20px;
-	}
-	p {
-		padding: 10px 10px 0 10px;
-	}
 }
 .carousel-control.left, .carousel-control.right {
 	background-image: none !important;
@@ -128,13 +124,13 @@ main .container .row article {
 }
 
 ol.carousel-indicators li.active {
-	background: gray;
+	background: white;
 }
 .fa-facebook-square, .fa-twitter-square, .fa-youtube-square {
 	color:black;
 	margin: 10px;
 }
-.fa-star-o {
+.fa-star {
 	color: yellow;
 }
 
@@ -142,6 +138,26 @@ footer .row {
 	text-align: center;
 }
 .shoppingCart {
-	background: #111;
+	background: #333;
 	color: white;
+	border: 2px solid #555;
+	padding: 5px;
+}
+.shoppingCartIcon {
+	background: #555;
+	padding: 10px;
+	color:white;
+}
+.btmargin0{
+margin-bottom: 0 !important;
+background: darken(#eee, 10%)
+}	
+@media screen and (max-width: 799px) {
+	.toppen {
+		padding: 0;
+	}
+	ol.carousel-indicators li{
+		display: none !important; 
+	}
+
 }
