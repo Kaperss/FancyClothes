@@ -1,19 +1,21 @@
-<<<<<<< HEAD
 <hr>
-<footer class="container">
-	<div class="row d-flex">
-		<p><strong>FancyClothes.dk</strong></p>
-		<p>Skrædderstien 7</p>
-		<p>4321 Fredensvang</p>
-		<p>E-mail: info@fancyness@gmail.com@google.dk</p>
-		<p>Sitemap</p>
-	</div>
+<footer>
+	<div class="container-fluid">
 	<div class="row">
-		3x FONT AWESOME HER
+			<p class="col-md-2 col-md-offset-1"><strong>FancyClothes.dk</strong></p>
+			<p class="col-md-2">Skrædderstien 7</p>
+			<p class="col-md-2">4321 Fredensvang</p>
+			<p class="col-md-2">E-mail: info@fancyness@gmail.com</p>
+			<p class="col-md-2">Sitemap</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<i class="fa fa-facebook-square fa-2x"></i> 
+			<i class="fa fa-twitter-square fa-2x"></i> 
+			<i class="fa fa-youtube-square fa-2x"></i> 
+		</div>
 	</div>
 </footer>
-
-=======
->>>>>>> 50191aaa3d2e55c31491dce02c108e36b1e2a55b
 </body>
 </html>
