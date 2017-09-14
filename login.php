@@ -8,10 +8,11 @@ require "includes/connect.php";
 $statement = $dbh->prepare("SELECT * FROM users WHERE dbUsername = ? AND dbPassword = ?");
 
 $statement->bindParam(1, $formUsername);
-$statement->bindParam(2,$formPassword);
+$statement->bindParam(2, $formPassword);
 $statement->execute();
 
-?> <div class="container">
+?> 
+<div class="container">
 	<?php
 	if (empty($row = $statement->fetch()) ){
 //Forkerte oplysninger så sker dette
@@ -19,33 +20,29 @@ $statement->execute();
 	}
 	else {
 	// Event hvis login lykkes	
-		echo "<p class='col-sm-4 col-sm-offset-4'>Yes, Logger dig ind..<p>";
+		echo "<p class='col-sm-4 col-sm-offset-4'>Yes, logger dig ind..<p>";
 		$_SESSION['username'] = $row['dbUsername'];
 		$_SESSION['password'] = $row['dbPassword'];
-		$_SESSION['accessLevel'] = $row['accessLevel'];
+		$_SESSION['accLevel'] = $row['accLevel'];
 		$_SESSION['userId'] = $row['userId'];
 		header("Refresh:2; url=index.php", true, 303);
 	}
 	$dbh = null;
 	?> 
 </div>
-<div class="container">
-
 	<aside class="container">
-
 		<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>"
 			method="post">
 			<div class="row">
 				<label for="formUsername">Indtast brugernavn</label>
 				<input type="text" class="col-sm-4 col-sm-offset-4"  placeholder="Brugernavn.."  name="formUsername">
 				<br>
-				<label for="formPassword1">Indtast password</label>
-				<input type="password" class="col-sm-4 col-sm-offset-4"  placeholder="Password.."  name="formPassword1">
+				<label for="formPassword">Indtast password</label>
+				<input type="password" class="col-sm-4 col-sm-offset-4"  placeholder="Password.."  name="formPassword">
 				<br>
 				<input type="submit" class="btn btn-success col-12" value="Log ind">
 			</div>
 		</form>  
 	</aside>
-	
-</div>
+
 <?php require "includes/footer.php" ?>

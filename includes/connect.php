@@ -10,7 +10,7 @@ try{
 	$dbh = new PDO("mysql:host=$servername;dbname=$dbName;charset=utf8", $username, $password);
 
 
-	//Fejlhandling
+	//Fejlhåndtering
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch 

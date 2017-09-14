@@ -11,6 +11,7 @@
 	<script src="js/script.js"></script>
 </head>
 <body>
+	<?php session_start() ?>
 	<div class="container toppen">
 		<div class="row">
 			<div class="flagogdkk container col-sm-2">
@@ -71,35 +72,34 @@
                 //Skifter mellem et log out link i nav eller to log ind / opret bruger links alt efter om man er logget ind eller ej
 					if(isset($_SESSION['username']) && !empty($_SESSION['username'])) 
 					{
-						echo '<li class="nav-item">
-						<a href="logout.php" class="nav-link p-3">Log ud </a>
-						</li>'; 
-					}
+						echo '<li class="nav-item">' ?>
+							<a href="logout.php" class="nav-link p-3">Log ud </a>
+						</li>
+						<?php }
 
-					else { 
-						?>
-						<li class="nav-item">
-							<a href="login.php" class="<?php if($title == "Login") {echo "active "; } ?> nav-link p-3 login">Log ind </a></li>
+						else { 
+							?>
 							<li class="nav-item">
+								<a href="login.php" class="<?php if($title == "Login") {echo "active "; } ?> nav-link p-3 login">Log ind </a></li>
+								<li class="nav-item">
 
-								<a href="register.php" class="<?php if($title == "Register") {echo "active "; } ?>nav-link p-3 register">Opret bruger </a>
-								</li> <?php
-							} 
-							?>
+									<a href="register.php" class="<?php if($title == "Register") {echo "active "; } ?>nav-link p-3 register">Opret bruger </a>
+									</li> <?php
+								} 
+								?>
 
-							<?php
-							if(isset($_SESSION['username'])&&($_SESSION['password'])) {
-								if($_SESSION['accessLevel'] >= 1) {
-									?>
-									<li class="nav-item">
-										<a href="newarticle.php" class="<?php if($title == "Ny Artikel") {echo "active "; } ?>nav-link p-3 newArticle">Ny artikel</a>
-									</li>
-									<?php
-								}  
-							}
-							?>
-
-						</ul>
+								<?php
+								if(isset($_SESSION['username'])&&($_SESSION['password'])) {
+									if($_SESSION['accLevel'] >= 1) {
+										?>
+										<li class="nav-item">
+											<a href="nyArtikel.php" class="<?php if($title == "Ny Artikel") {echo "active "; } ?>nav-link p-3 newArticle">Ny artikel</a>
+										</li>
+										<?php
+									}  
+								}
+								?>
+							</ul>
 				<!-- To få til at virke ordentligt 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="nav-item">

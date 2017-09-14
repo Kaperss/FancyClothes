@@ -3,7 +3,7 @@ $title = "Ny Artikel";
  ?>
 <article class="container nyArtikel">
     <div class="row">
-        <form action="includes/insertArticles.php" method="post" class="form-horizontal">
+        <form action="nyArtikel.php" method="post" class="form-horizontal">
             <div class="form-group">
                 <label for="heading">Artiklens overskrift</label> 
                 <div class="form-group col-lg-12">
