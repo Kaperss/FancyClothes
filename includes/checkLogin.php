@@ -1,5 +1,4 @@
 <?php 
-require "../header.php";
 $title = "Login";
 //Får data fra login formen
 $formUsername = $_POST['formUsername'];
@@ -28,5 +27,4 @@ if (empty($row = $statement->fetch()) ){
 		header("Refresh:2; url=../index.php", true, 303);
 	}
 	$dbh = null;
-	require "../footer.php";
 	?> 
