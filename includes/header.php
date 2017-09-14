@@ -52,10 +52,10 @@
 			<div class="collapse navbar-collapse" id="navigation">
 				<ul class="nav navbar-nav navbar-left">
 					<li class="nav-item">
-						<a class="nav-link p-3" href="index.php">Forside</a>
+						<a class="<?php if($title == "Home") {echo "active "; } ?>nav-link p-3" href="index.php">Forside</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link p-3" href="index.php">Produkter</a>
+						<a class="nav-link p-3 " href="index.php">Produkter</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link">Nyheder</a>
@@ -66,28 +66,40 @@
 					<li class="nav-item">
 						<a href="#" class="nav-link">Om os</a>
 					</li>
-					<li class="nav-item">
-						<?php
+
+					<?php
                 //Skifter mellem et log out link i nav eller to log ind / opret bruger links alt efter om man er logget ind eller ej
-						if(isset($_SESSION['username']) && !empty($_SESSION['username'])) 
-						{
-							echo '<a href="logout.php" 
-							class="nav-link p-3">
-							Log ud </a>'; 
-						}
+					if(isset($_SESSION['username']) && !empty($_SESSION['username'])) 
+					{
+						echo '<li class="nav-item">
+						<a href="logout.php" class="nav-link p-3">Log ud </a>
+						</li>'; 
+					}
 
-						else { 
-							echo '<li><a class="nav-link p-3 login" 
-							href="login.php">
-							Log ind </a></li>';
-							echo '<li><a class="nav-link p-3 register" 
-							href="register.php">
-							Opret bruger </a></li>';
-						} 
+					else { 
 						?>
+						<li class="nav-item">
+							<a href="login.php" class="<?php if($title == "Login") {echo "active "; } ?> nav-link p-3 login">Log ind </a></li>
+							<li class="nav-item">
 
-					</li>
-				</ul>
+								<a href="register.php" class="<?php if($title == "Register") {echo "active "; } ?>nav-link p-3 register">Opret bruger </a>
+								</li> <?php
+							} 
+							?>
+
+							<?php
+							if(isset($_SESSION['username'])&&($_SESSION['password'])) {
+								if($_SESSION['accessLevel'] >= 1) {
+									?>
+									<li class="nav-item">
+										<a href="newarticle.php" class="<?php if($title == "Ny Artikel") {echo "active "; } ?>nav-link p-3 newArticle">Ny artikel</a>
+									</li>
+									<?php
+								}  
+							}
+							?>
+
+						</ul>
 				<!-- To få til at virke ordentligt 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="nav-item">
@@ -101,48 +113,48 @@
 						</div>			
 					</li>
 				</ul> 
-				-->
-			</div>
+			-->
 		</div>
-	</nav>
-	<hr>
-	<!-- Bootstrap carousel / slideshow -->
-	<div id="myCarousel" class="carousel slide container" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
+	</div>
+</nav>
+<hr>
+<!-- Bootstrap carousel / slideshow -->
+<div id="myCarousel" class="carousel slide container" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
 
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-				<img src="img/slide1.jpg" alt="Nogle sko">
-			</div>
-
-			<div class="item">
-				<img src="img/slide2.jpg" alt="Andre sko">
-			</div>
-
-			<div class="item">
-				<img src="img/slide3.jpg" alt="Jaks">
-			</div>
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="img/slide1.jpg" alt="Nogle sko">
 		</div>
 
-		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-			<span class="sr-only">Next</span>
-		</a>
+		<div class="item">
+			<img src="img/slide2.jpg" alt="Andre sko">
+		</div>
+
+		<div class="item">
+			<img src="img/slide3.jpg" alt="Jaks">
+		</div>
 	</div>
-	<!-- HUSK KATEGORIER + NYEHDSBREV -->
-	<hr>
-	<div class="container">
-		<h1 class="centrer">FancyClothes.DK - tøj, kvalitet, simpelt!</h1>
-	</div>
-	<hr>
+
+	<!-- Left and right controls -->
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+<!-- HUSK KATEGORIER + NYEHDSBREV -->
+<hr>
+<div class="container">
+	<h1 class="centrer">FancyClothes.DK - tøj, kvalitet, simpelt!</h1>
+</div>
+<hr>

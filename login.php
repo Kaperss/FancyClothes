@@ -1,5 +1,5 @@
-<?php require "includes/header.php" ?>
-<?php 
+<?php require "includes/header.php"; 
+$title = "Login";
 //Får data fra login formen
 $formUsername = $_POST['formUsername'];
 $formPassword = $_POST['formPassword'];
@@ -11,20 +11,41 @@ $statement->bindParam(1, $formUsername);
 $statement->bindParam(2,$formPassword);
 $statement->execute();
 
-if (empty($row = $statement->fetch()) ){
+?> <div class="container">
+	<?php
+	if (empty($row = $statement->fetch()) ){
 //Forkerte oplysninger så sker dette
-	echo "<p class='errorMsg'> FOKKERT brugernavn eller pasord</p>";
-	header("Refresh:2; url=index.php", true, 303);
-}
-else {
+		echo "<p class='col-sm-4 col-sm-offset-4 errorMsg'> Fejl i brugernavn eller password!</p>";
+	}
+	else {
 	// Event hvis login lykkes	
-	echo "<p>IKKE FOKKERT brugernavn eller pasord<p>";
-	$_SESSION['username'] = $row['dbUsername'];
-	$_SESSION['password'] = $row['dbPassword'];
-	$_SESSION['accessLevel'] = $row['accessLevel'];
-	$_SESSION['userId'] = $row['userId'];
-	header("Refresh:2; url=index.php", true, 303);
-}
-$dbh = null;
-?>
+		echo "<p class='col-sm-4 col-sm-offset-4'>Yes, Logger dig ind..<p>";
+		$_SESSION['username'] = $row['dbUsername'];
+		$_SESSION['password'] = $row['dbPassword'];
+		$_SESSION['accessLevel'] = $row['accessLevel'];
+		$_SESSION['userId'] = $row['userId'];
+		header("Refresh:2; url=index.php", true, 303);
+	}
+	$dbh = null;
+	?> 
+</div>
+<div class="container">
+
+	<aside class="container">
+
+		<form id="login" action="<?php echo $_SERVER['PHP_SELF']; ?>"
+			method="post">
+			<div class="row">
+				<label for="formUsername">Indtast brugernavn</label>
+				<input type="text" class="col-sm-4 col-sm-offset-4"  placeholder="Brugernavn.."  name="formUsername">
+				<br>
+				<label for="formPassword1">Indtast password</label>
+				<input type="password" class="col-sm-4 col-sm-offset-4"  placeholder="Password.."  name="formPassword1">
+				<br>
+				<input type="submit" class="btn btn-success col-12" value="Log ind">
+			</div>
+		</form>  
+	</aside>
+	
+</div>
 <?php require "includes/footer.php" ?>

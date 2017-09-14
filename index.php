@@ -1,5 +1,4 @@
 <?php
-$activePage = "home";
 $title = "Home";
 require_once "includes/header.php" ?>
 <!-- Sidebar heromkring -->

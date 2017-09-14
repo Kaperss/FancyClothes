@@ -1,4 +1,5 @@
 <?php
+$title = "Register";
 if (isset($_SESSION['username'])) {
 	header("location:index.php");
 }
