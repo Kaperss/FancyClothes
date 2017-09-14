@@ -22,6 +22,9 @@ hr {
 .errorMsg {
 	color: red;
 }
+.registerContainer {
+	text-align: center;
+}
 .flagogdkk {
 	.row {
 		border: 1px solid darken(#eee, 20%);
@@ -107,14 +110,16 @@ nav {
 
 main article {
 	text-align: center;
-	border: 1px solid #ddd;
+	border: 9px solid transparent;
 	padding: 0 !important;
-	margin: 10px;
 	h4 {
 		padding: 10px;
 	}
 	.fa {
 		padding-bottom: 15px;
+	}
+	.centrer {
+		border:1px solid #eee;
 	}
 }
 .centrer {

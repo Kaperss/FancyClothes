@@ -16,11 +16,11 @@
 		<div class="row">
 			<div class="flagogdkk container col-sm-2">
 				<div class="row">
-					<div class="flag col-sm-7 col-md-8 col-lg-8">
+					<div class="flag col-sm-7 col-md-8">
 						<img src="img/ikon.png" alt="Dansk sprog">
 						Dansk
 					</div>
-					<div class="dkk col-sm-5 col-md-4 col-lg-4">
+					<div class="dkk col-sm-5 col-md-4">
 						DKK
 					</div>
 				</div>
@@ -100,7 +100,6 @@
 								}
 								?>
 							</ul>
-				<!-- To få til at virke ordentligt 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="nav-item">
 						<div class="row">
@@ -113,7 +112,6 @@
 						</div>			
 					</li>
 				</ul> 
-			-->
 		</div>
 	</div>
 </nav>

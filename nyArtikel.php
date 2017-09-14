@@ -1,9 +1,11 @@
-<?php require "includes/header.php";
+<?php 
 $title = "Ny Artikel";
+require "includes/header.php";
+
  ?>
 <article class="container nyArtikel">
     <div class="row">
-        <form action="nyArtikel.php" method="post" class="form-horizontal">
+        <form action="includes/insertArticle.php" method="post" class="form-horizontal">
             <div class="form-group">
                 <label for="heading">Artiklens overskrift</label> 
                 <div class="form-group col-lg-12">

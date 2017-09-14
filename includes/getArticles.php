@@ -14,8 +14,6 @@ while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
 	?>
 	<!-- Hiver værdierne ud af tabellen fra  DB -->
-
-</aside>
 <article class="col-sm-12 col-md-6 col-lg-3">
 	<img src="img/<?php echo $row['imgSrc']; ?>" class="img-responsive" alt="<?php echo $row['imgAlt']; ?>">
 	<div class="centrer"><h4><?php echo $row['heading']; ?></h4>
