@@ -48,8 +48,7 @@ if (isset($_SESSION['username'])) {
 			echo "<p class='col-12'>Fejl - SKRIV DET SAMME KODEORD TO GANGE I TRÆK BANDEORD OG BROK</p>";
 			
 		} else {
-			echo "<p>Tillykke med det, du findes nu i denne database! Start med at logge ind..</p>";
-			header("Refresh:3; url=index.php", true, 303);
+			echo "<p class='container'>Tillykke med det, du findes nu i denne database! Start med at logge ind..</p>";
 			$statement = $dbh->prepare("INSERT INTO users(dbUserName, dbPassword) VALUES(?,?)");
 			$statement->bindParam(1, $formUsername);
 			$statement->bindParam(2, $formPassword1);
@@ -59,5 +58,5 @@ if (isset($_SESSION['username'])) {
 		}
 	}
 	?>
-	
+
 <?php require "includes/footer.php" ?>

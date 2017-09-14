@@ -77,6 +77,10 @@ main article {
   text-align: center;
   border: 1px solid #ddd;
   padding: 0 !important; }
+  main article h4 {
+    padding: 10px; }
+  main article .fa {
+    padding-bottom: 15px; }
 
 .centrer {
   text-align: center; }
@@ -85,7 +89,8 @@ main article {
   color: grey; }
 
 .greybg {
-  background: #eee; }
+  background: #eee;
+  border-top: 1px solid #ddd; }
 
 .carousel-control.left, .carousel-control.right {
   background-image: none !important;
@@ -117,12 +122,12 @@ footer .row {
 
 .shoppingCartIcon {
   background: #555;
-  padding: 10px;
   color: white; }
 
 .btmargin0 {
   margin-bottom: 0 !important;
-  background: #d5d5d5; }
+  background: #d5d5d5;
+  padding: 10px; }
 
 @media screen and (max-width: 799px) {
   .toppen {
